@@ -57,7 +57,7 @@ def next_repeating_number_2(number, N):
 
 
 def main():
-    with open('day2/test.txt', 'r') as file:
+    with open('input/2.txt', 'r') as file:
         line = file.readline()
     ranges = line.split(',')
     results = []
@@ -75,10 +75,11 @@ def main():
     print(sum(results))
 
 import re
-pattern = re.compile(r'(\d+)(\1)+')
+pattern = re.compile(r'(\d+)(\1)')
+# pattern2 = re.compile(r'(\d+)(\1)+')
 
 def main3():
-    with open('day2/test.txt', 'r') as file:
+    with open('input/2.txt', 'r') as file:
         line = file.readline()
     ranges = line.split(',')
     results = set()
